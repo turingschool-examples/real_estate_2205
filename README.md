@@ -138,7 +138,7 @@ Use TDD to update your `House` class so that it responds to the following intera
 There are **3** methods in iteration 4:
 
 * A house can calculate its `price_per_square_foot` by dividing its price by its area.
-* A house can return a list of `rooms_sorted_by_area` with area values descending (greatest first).
+* A house can return a list of `rooms_sorted_by_area` where the `room` instances returned are listed from greatest area to least area.
 * `#rooms_by_category` returns a hash where the keys are symbols of each room category, and the values are a collection of room instances that match the category.
 
 ```ruby
