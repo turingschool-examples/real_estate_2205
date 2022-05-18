@@ -73,5 +73,18 @@ RSpec.describe House do
       expect(house.details.keys).to eq ['price', 'address']
       expect(house.details.values).to eq [400000, "123 sugar lane"]
     end
+
+    it "returns the price per square foot" do
+      house = House.new("$400000", "123 sugar lane")
+      room_1 = Room.new(:bedroom, 10, '13')
+      room_2 = Room.new(:bedroom, 11, '15')
+      room_3 = Room.new(:living_room, 25, '15')
+      room_4 = Room.new(:basement, 30, '41')
+      house.add_room(room_1)
+      house.add_room(room_2)
+      house.add_room(room_3)
+      house.add_room(room_4)
+      expect(house.price_per_square_foot).to eq 210.53
+    end
   end
 end
