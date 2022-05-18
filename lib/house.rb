@@ -1,3 +1,5 @@
+require './lib/room'
+
 class House
 
   attr_reader :price, :address, :rooms
@@ -25,6 +27,18 @@ class House
       end
     end
     return category_rooms
+  end
+
+  def area
+    house_area = 0
+    @rooms.each do |room|
+      house_area += room.area
+    end
+    return house_area
+  end
+
+  def details
+
   end
 
 end
