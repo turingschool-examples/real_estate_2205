@@ -17,4 +17,8 @@ class Room
     return false
   end
 
+  def paint
+    @painted = true
+  end
+
 end
