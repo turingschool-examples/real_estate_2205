@@ -21,11 +21,8 @@ class Room
 
 
   def is_painted?
-    if @painted = true
-      return true
-    elsif
+    return true if @painted
     return false
-    end
   end
 
 
