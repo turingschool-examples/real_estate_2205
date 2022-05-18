@@ -71,7 +71,7 @@ RSpec.describe House do
     it "returns a hash of details" do
       house = House.new("$400000", "123 sugar lane")
       expect(house.details.keys).to eq ['price', 'address']
-      expect(house.details.values).to eq ["400000", "123 sugar lane"]
+      expect(house.details.values).to eq [400000, "123 sugar lane"]
     end
   end
 end
