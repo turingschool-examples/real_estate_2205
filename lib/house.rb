@@ -38,7 +38,7 @@ class House
   end
 
   def details
-
+    house_hash = {"price" => @price, "address" => @address}
   end
 
 end
