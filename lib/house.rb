@@ -1,5 +1,3 @@
-require './lib/room'
-
 class House
 
   attr_reader :price, :address, :rooms
@@ -45,9 +43,13 @@ class House
     return (@price.to_f / area.to_f).round(2)
   end
 
-  def rooms_sorted_by_area
-
-  end
+  # def rooms_sorted_by_area
+  #   # This has got to just be @rooms.sort or @rooms.sort_by(area)
+  #   # But I can't figure out correctly call area
+  #   # After testing I know that sort_by returns smallest to largest so we need
+  #   # To reverse it once you do actually figure out how to pull area
+  #   return @rooms.sort_by(area).reverse
+  # end
 
   def rooms_by_category
     rooms_by_category = Hash.new
