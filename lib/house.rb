@@ -1,4 +1,5 @@
 class House
+
   attr_reader :price, :address, :rooms
 
   def initialize(price, address)
@@ -14,6 +15,16 @@ class House
   def above_market_average?
     return true if @price > 500000
     return false
+  end
+
+  def rooms_from_category(category)
+    category_rooms = []
+    @rooms.each do |room|
+      if room.category == category
+        category_rooms << room
+      end
+    end
+    return category_rooms
   end
 
 end
