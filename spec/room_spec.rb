@@ -24,7 +24,12 @@ RSpec.describe Room do
     it "isn't painted by default" do
       room = Room.new(:bedroom, 10, '13')
       expect(room.is_painted?).to eq false
-      
+    end
+
+    it "can be painted" do
+      room = Room.new(:bedroom, 10, '13')
+      room.paint
+      expect(room.is_painted?).to eq true
     end
   end
 end
