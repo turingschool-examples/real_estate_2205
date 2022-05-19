@@ -85,15 +85,18 @@ RSpec.describe House do
 
     end
 
-    house = House.new("$400000", "123 sugar lane")
-    room_1= Room.new(:bedroom, 10, '13')
-    room_2 = Room.new(:living_room, 15, '12')
-    room_3 = Room.new(:living_room, 25, '15')
-    room_4 = Room.new(:basement, 30, '41')
-    expect(room_1.area).to eq(130)
-    expect(room_2.area).to eq(180)
-    expect(room_3.area).to eq(375)
-    expect(room_4.area).to eq(1230)
+    xit "can sort rooms by area greatest to least" do
+      house = House.new("$400000", "123 sugar lane")
+      room_1= Room.new(:bedroom, 10, '13')
+      room_2 = Room.new(:living_room, 15, '12')
+      room_3 = Room.new(:living_room, 25, '15')
+      room_4 = Room.new(:basement, 30, '41')
+      expect(room_1.area).to eq(130)
+      expect(room_2.area).to eq(180)
+      expect(room_3.area).to eq(375)
+      expect(room_4.area).to eq(1230)
+      expect(rooms_sorted_by_area).to eq([room_4, room_3, room_2, room_1])
   end
 
   end
+end
