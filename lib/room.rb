@@ -1,6 +1,6 @@
 class Room
-attr_reader :category, :length, :width
-attr_accessor :width
+attr_reader :category, :length, :width, :paint
+attr_accessor :width, :paint
   def initialize(category, length, width)
     @category = category
     @length = length
@@ -15,12 +15,11 @@ attr_accessor :width
   end
 
   def is_painted?
-    if @paint == true
-      false
-  else
-    true
+    return @paint
+  end
 
-    end
+  def paint
+    @paint = true
 
   end
 
