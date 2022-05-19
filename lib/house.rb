@@ -31,10 +31,18 @@ attr_accessor :rooms
     end
 
     rooms_array
-    ##HMMM???? look at potluck example?
   end
 
   def house_area
+    def area
+      @length = length
+      @width = width.to_i
+      return @length * @width
+    end
+    room_1= Room.new(:bedroom, 10, '13')
+    room_2 = Room.new(:living_room, 15, '12')
+    room_3 = Room.new(:living_room, 25, '15')
+    room_4 = Room.new(:basement, 30, '41')
     total = room_1.area + room_2.area + room_3.area + room_4.area
     return total
   end

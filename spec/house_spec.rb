@@ -55,12 +55,27 @@ RSpec.describe House do
     end
 
     it "has an area" do
+      house = House.new("$400000", "123 sugar lane")
       room_1= Room.new(:bedroom, 10, '13')
       room_2 = Room.new(:living_room, 15, '12')
       room_3 = Room.new(:living_room, 25, '15')
       room_4 = Room.new(:basement, 30, '41')
-
+      expect(room_1.area).to eq(130)
+      expect(room_2.area).to eq(180)
+      expect(room_3.area).to eq(375)
+      expect(room_4.area).to eq(1230)
+      expect(house.house_area).to eq(1915)
 
     end
+
+    it "has a hash of attributes" do
+      house = House.new("$400000", "123 sugar lane")
+      expect(house.price).to eq("$400000")
+      expect(house.address).to eq("123 sugar lane")
+      expect(house.details).to eq({"price" => 400000, "address" => "123 sugar lane"})
+
+    end
+
   end
-end
+
+  end
