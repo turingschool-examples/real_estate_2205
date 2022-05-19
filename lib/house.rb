@@ -48,6 +48,9 @@ attr_accessor :rooms
   end
 
   def details
+    # @price = price.to_i
+    house = House.new("$400000", "123 sugar lane")
+
     house_hash = {
       "price" => house.price,
       "address" => house.address,

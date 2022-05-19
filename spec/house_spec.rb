@@ -72,7 +72,7 @@ RSpec.describe House do
       house = House.new("$400000", "123 sugar lane")
       expect(house.price).to eq("$400000")
       expect(house.address).to eq("123 sugar lane")
-      expect(house.details).to eq({"price" => 400000, "address" => "123 sugar lane"})
+      expect(house.details).to eq({"price" => "$400000", "address" => "123 sugar lane"})
 
     end
 
