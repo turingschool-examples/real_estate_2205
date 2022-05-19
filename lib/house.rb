@@ -11,4 +11,12 @@ attr_accessor :rooms
     @rooms << room_1
   end
 
+  def above_market_average?
+    if @price.to_i > 500000
+      true
+    else
+      false
+    end
+  end
+
 end

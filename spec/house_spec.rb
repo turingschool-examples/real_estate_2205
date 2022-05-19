@@ -15,6 +15,12 @@ RSpec.describe House do
       expect(house.rooms).to eq([])
     end
 
+    it "can check if it's above market average" do
+      house = House.new("$400000", "123 sugar lane")
+      expect(house.above_market_average?).to eq(false)
+
+    end
+
     it "has rooms" do
       room_1= Room.new(:bedroom, 10, '13')
       expect(room_1).to be_a(Room)
