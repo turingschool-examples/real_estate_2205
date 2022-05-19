@@ -2,7 +2,7 @@ require './lib/room'
 require './lib/house'
 
 RSpec.describe House do
-  describe "Iteration 2 and 3" do
+  describe "Iteration 2, 3, and 4" do
     it "exists" do
       house = House.new("$400000", "123 sugar lane")
       expect(house).to be_a(House)
@@ -76,6 +76,24 @@ RSpec.describe House do
 
     end
 
+    xit "can calculate its price per sq foot" do
+      house = House.new("$400000", "123 sugar lane")
+
+      expect(house.price).to eq("$400000")
+      expect(house.price.to_i).to eq(400000)
+      expect(house.price_per_square_foot).to eq(208.88)
+
+    end
+
+    house = House.new("$400000", "123 sugar lane")
+    room_1= Room.new(:bedroom, 10, '13')
+    room_2 = Room.new(:living_room, 15, '12')
+    room_3 = Room.new(:living_room, 25, '15')
+    room_4 = Room.new(:basement, 30, '41')
+    expect(room_1.area).to eq(130)
+    expect(room_2.area).to eq(180)
+    expect(room_3.area).to eq(375)
+    expect(room_4.area).to eq(1230)
   end
 
   end

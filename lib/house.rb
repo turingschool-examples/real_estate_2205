@@ -58,4 +58,6 @@ attr_accessor :rooms
 
     p house_hash
   end
+
+
 end
