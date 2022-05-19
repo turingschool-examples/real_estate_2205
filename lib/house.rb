@@ -1,3 +1,5 @@
+require './lib/room'
+
 class House
 attr_reader :price, :address, :rooms
 attr_accessor :rooms
@@ -19,4 +21,12 @@ attr_accessor :rooms
     end
   end
 
+  def rooms_from_category(space)
+    ##HMMM????
+  end
+
+  def house_area
+    total = room_1.area + room_2.area + room_3.area + room_4.area
+    return total
+  end
 end
