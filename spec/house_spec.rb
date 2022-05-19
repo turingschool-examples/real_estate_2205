@@ -40,18 +40,18 @@ RSpec.describe House do
       expect(house.rooms).to eq([room_1, room_2, room_3, room_4])
     end
 
-    xit "can return rooms from a certain category" do
-      room_1= Room.new(:bedroom, 10, '13')
-      expect(room_1).to be_a(Room)
+    it "can return rooms from a certain category" do
       house = House.new("$400000", "123 sugar lane")
-      house.add_room(room_1)
+      room_1= Room.new(:bedroom, 10, '13')
       room_2 = Room.new(:living_room, 15, '12')
-      house.add_room(room_2)
       room_3 = Room.new(:living_room, 25, '15')
-      house.add_room(room_3)
       room_4 = Room.new(:basement, 30, '41')
+      house.add_room(room_1)
+      house.add_room(room_2)
+      house.add_room(room_3)
       house.add_room(room_4)
-      expect(house.rooms_from_category(:living_room)).to eq[room_2, room_3]
+      expect(house.rooms_from_category(:bedroom)).to eq([room_1])
+      expect(house.rooms_from_category(:basement)).to eq([room_4])
     end
 
     it "has an area" do

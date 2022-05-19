@@ -21,8 +21,17 @@ attr_accessor :rooms
     end
   end
 
-  def rooms_from_category(space)
-    ##HMMM????
+  def rooms_from_category(category)
+    rooms_array = []
+
+    @rooms.each do |room|
+      if room.category == category
+        rooms_array << room
+      end
+    end
+
+    rooms_array
+    ##HMMM???? look at potluck example?
   end
 
   def house_area
