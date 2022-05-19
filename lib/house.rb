@@ -29,4 +29,13 @@ attr_accessor :rooms
     total = room_1.area + room_2.area + room_3.area + room_4.area
     return total
   end
+
+  def details
+    house_hash = {
+      "price" => house.price,
+      "address" => house.address,
+    }
+
+    p house_hash
+  end
 end
