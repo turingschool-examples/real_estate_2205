@@ -59,6 +59,7 @@ attr_accessor :rooms
     p house_hash
   end
 
+#Bonus Iteration 4:
   def price_per_square_foot
     house = House.new("$400000", "123 sugar lane")
     #price as an integer
@@ -76,7 +77,28 @@ attr_accessor :rooms
 
   end
 
+  def rooms_sorted_by_area
+    #rooms_array
+    house = House.new("$400000", "123 sugar lane")
+
+    room_1 = Room.new(:bedroom, 10, '13')
+    room_2 = Room.new(:living_room, 15, '12')
+    room_3 = Room.new(:living_room, 25, '15')
+    room_4 = Room.new(:basement, 30, '41')
+    rooms = [room_1, room_2, room_3, room_4]
+    #each room instance from the rooms_array
+    rooms = rooms.sort
+    # rooms_area = rooms.map do |room|
+    #   room.area
+    return rooms
+
+    end
 
 
 
-end
+
+    #sort in descending order greatest to least
+    #some kind of enumerable method needed
+    #possibly shoveling back in to rooms_array
+    #unless I can do this using map
+  end
