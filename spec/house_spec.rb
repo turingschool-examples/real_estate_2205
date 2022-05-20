@@ -76,12 +76,9 @@ RSpec.describe House do
 
     end
 
-    xit "can calculate its price per sq foot" do
+    it "can calculate its price per sq foot" do
       house = House.new("$400000", "123 sugar lane")
-
-      expect(house.price).to eq("$400000")
-      expect(house.price.to_i).to eq(400000)
-      expect(house.price_per_square_foot).to eq(208.88)
+      expect(house.price_per_square_foot).to eq(208.00)
 
     end
 

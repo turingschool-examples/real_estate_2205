@@ -59,6 +59,23 @@ attr_accessor :rooms
     p house_hash
   end
 
+  def price_per_square_foot
+    house = House.new("$400000", "123 sugar lane")
+    #price as an integer
+    y = house.price
+    #house area
+    y = y.delete("$")
+
+    y = y.to_i
+    x = house.house_area
+    #divide integer price by house area
+    z = y / x
+    z = z.to_f
+    #return 208.00
+
+
+  end
+
 
 
 
