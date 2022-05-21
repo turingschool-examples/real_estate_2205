@@ -24,8 +24,18 @@ class House
         return_array << room
       end
     end
-    
+
     return_array
+  end
+
+  def area
+    total_area = 0
+
+    @rooms.each do |room|
+      total_area += room.area
+    end
+
+    total_area
   end
 
 end
