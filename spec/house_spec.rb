@@ -88,6 +88,6 @@ RSpec.describe House do
       :basement => [room_4]
     }
 
-    expect(house.rooms_by_category).to eq expected 
+    expect(house.rooms_by_category).to eq expected
   end
 end
