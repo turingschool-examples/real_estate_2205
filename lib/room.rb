@@ -8,5 +8,8 @@ class Room
       @painted = []
     end
 
+    def area
+      @width.to_i * @length
+      end
 
-end
+    
