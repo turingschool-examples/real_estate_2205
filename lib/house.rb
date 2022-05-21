@@ -12,4 +12,37 @@ class House
     @rooms << room
   end
 
+  def above_market_average?
+    @price > 500_000
+  end
+
+  def rooms_from_category(category)
+    return_array = []
+
+    @rooms.each do |room|
+      if room.category == category
+        return_array << room
+      end
+    end
+
+    return_array
+  end
+
+  def area
+    total_area = 0
+
+    @rooms.each do |room|
+      total_area += room.area
+    end
+
+    total_area
+  end
+
+  def details
+    details_hash = {
+      "price" => @price,
+      "address" => @address
+    }
+  end
+
 end
