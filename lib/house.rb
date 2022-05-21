@@ -30,4 +30,8 @@ class House
     return area
   end
 
+  def details
+    deets = {"price" => @price[1 .. -1].to_i, "address" => @address}
+  end
+
 end
