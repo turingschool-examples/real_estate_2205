@@ -59,4 +59,27 @@ class House
     sorted_rooms
   end
 
+  def rooms_by_category
+    return_hash = Hash.new
+    unique_categories = []
+
+    @rooms.each do |room|
+      unique_categories << room.category
+    end
+
+    unique_categories.uniq!
+
+    unique_categories.each do |category|
+      value_array = []
+      @rooms.each do |room|
+        if room.category == category
+          value_array << room
+        end
+      end
+      return_hash[category] = value_array
+    end
+
+    return_hash
+  end
+
 end
