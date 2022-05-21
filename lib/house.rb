@@ -1,10 +1,14 @@
 class House
-  attr_reader :price, :address, :rooms, :area
+  attr_reader :price, :address, :rooms, :area, :details
   def initialize(price, address)
-    @price = price
+    @price = price[1..-1].to_i
     @address = address
     @rooms = []
     @area = 0
+    @details = {
+      "price" => @price,
+      "address" => @address
+    }
   end
 
   def add_room(new_room)
@@ -13,7 +17,7 @@ class House
   end
 
   def above_market_average?
-    if @price[1..-1].to_i > 500000
+    if @price > 500000
       true
     else
       false
