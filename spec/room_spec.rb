@@ -2,23 +2,34 @@ require './lib/room'
 
 RSpec.describe Room do
   describe "Iteration 1" do
+    before (:each) do
+      @room = Room.new(:bedroom, 10, '13')
+
+      @room1 = Room.new(:bedroom, 10, '13')
+      @room2 = Room.new(:bedroom, 15, '12')
+    end
+
     it "exists" do
-      room = Room.new(:bedroom, 10, '13')
-      expect(room).to be_a Room
+      expect(@room).to be_a(Room)
     end
 
-    xit "it has a category" do
-      room = Room.new(:bedroom, 10, '13')
-
-      expect(room.category).to eq(:bedroom)
+    it "it has a category" do
+      expect(@room.category).to eq(:bedroom)
     end
 
-    xit "can get area" do
-      room1 = Room.new(:bedroom, 10, '13')
-      room2 = Room.new(:living_room, 15, '12')
-
-      expect(room1.area).to eq(130)
-      expect(room2.area).to eq(180)
+    it "has area" do
+      expect(@room1.area).to eq(130)
+      expect(@room2.area).to eq(180)
     end
+
+    it "hasn't been painted" do
+      expect(@room.is_painted?).to eq(false)
+    end
+
+    it "has been painted" do
+      @room.paint
+      expect(@room.is_painted?).to eq(true)
+    end
+
   end
 end
