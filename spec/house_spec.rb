@@ -46,6 +46,12 @@ RSpec.describe House do
       expect(house.above_market_average?).to be false
     end
 
+    it 'returns true if above market average' do
+      house = House.new("$600000", "123 sugar lane")
+
+      expect(house.above_market_average?).to be true
+    end
+
   end
 
 end
