@@ -16,4 +16,16 @@ class House
     @price > 500_000
   end
 
+  def rooms_from_category(category)
+    return_array = []
+
+    @rooms.each do |room|
+      if room.category == category
+        return_array << room
+      end
+    end
+    
+    return_array
+  end
+
 end
