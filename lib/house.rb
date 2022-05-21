@@ -1,13 +1,15 @@
 class House
-  attr_reader :price, :address, :rooms
+  attr_reader :price, :address, :rooms, :area
   def initialize(price, address)
     @price = price
     @address = address
     @rooms = []
+    @area = 0
   end
 
   def add_room(new_room)
     @rooms << new_room
+    @area += new_room.area
   end
 
   def above_market_average?
