@@ -13,7 +13,7 @@ RSpec.describe Room do
       expect(room.category).to eq(:bedroom)
     end
 
-    xit "can get area" do
+    it "can get area" do
       room1 = Room.new(:bedroom, 10, '13')
       room2 = Room.new(:living_room, 15, '12')
 
