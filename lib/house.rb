@@ -3,4 +3,4 @@ class House
     @price = price
     @address = address
   end
-end 
+end

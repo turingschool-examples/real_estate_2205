@@ -8,4 +8,11 @@ RSpec.describe House do
       expect(house).to be_a House
     end
   end
+
+  it "it has rooms" do
+    house = House.new("$400000", "123 sugar lane")
+    expect(house.rooms).to eq([])
+  end
+
+
 end
