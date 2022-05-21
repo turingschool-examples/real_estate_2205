@@ -1,11 +1,14 @@
+require 'pry'
+
 class House
 
-  attr_reader :price, :address, :rooms
+  attr_reader :price, :address, :rooms, :area
 
   def initialize(price,address)
     @price = price[1..-1].to_i
     @address = address
     @rooms = []
+    @area = 0
   end
 
   def add_room(room)
@@ -35,6 +38,7 @@ class House
       total_area += room.area
     end
 
+    @area = total_area
     total_area
   end
 
@@ -43,6 +47,10 @@ class House
       "price" => @price,
       "address" => @address
     }
+  end
+
+  def price_per_square_foot
+    (@price / self.area.to_f).round(2)
   end
 
 end
