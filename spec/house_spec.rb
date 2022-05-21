@@ -20,5 +20,11 @@ RSpec.describe House do
 
       expect(house.address).to eq("123 sugar lane")
     end
+
+    it 'has rooms which start empty' do
+      house = House.new("$400000", "123 sugar lane")
+
+      expect(house.rooms).to eq([])
+    end
   end
 end
