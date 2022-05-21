@@ -15,6 +15,5 @@ RSpec.describe House do
     house.add_rooms(room_1)
 
     expect(house.add_rooms(room_1)).to eq (house.rooms)
-
   end
 end
