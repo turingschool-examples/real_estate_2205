@@ -60,6 +60,16 @@ class House
     sorted
   end
 
+  def rooms_by_category
+    category_hash = {}
+    @rooms.each do |room|
+      category_hash[room.category] = []
+    end
+    @rooms.each do |room|
+      category_hash[room.category] << room
+    end
+    category_hash
+  end
 
 
 end
