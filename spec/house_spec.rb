@@ -92,14 +92,14 @@ RSpec.describe House do
     it "can sort rooms by area" do
       house = House.new("$400000", "123 sugar lane")
       room_1 = Room.new(:bedroom, 10, '13')
-      room_2 = Room.new(:bedroom, 11, '15')
+      room_2 = Room.new(:bedroom, 1, '8')
       room_3 = Room.new(:living_room, 25, '15')
-      room_4 = Room.new(:basement, 30, '41')
+      room_4 = Room.new(:basement, 8, '5')
       house.add_room(room_1)
       house.add_room(room_2)
       house.add_room(room_3)
       house.add_room(room_4)
-      expect(house.rooms_sorted_by_area).to eq()
+      expect(house.rooms_sorted_by_area).to eq([room_2, room_4, room_1, room_3])
     end
 
   end

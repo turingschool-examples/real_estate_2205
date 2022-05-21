@@ -54,7 +54,12 @@ class House
   end
 
   def rooms_sorted_by_area
-
+    sorted = @rooms.sort_by do |room|
+      room.area
+    end
+    sorted
   end
+
+
 
 end
