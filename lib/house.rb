@@ -10,4 +10,11 @@ class House
     @rooms << new_room
   end
 
+  def above_market_average?
+    if @price[1..-1].to_i > 500000
+      true
+    else
+      false
+    end
+  end
 end
