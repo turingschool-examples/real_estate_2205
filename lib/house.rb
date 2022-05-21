@@ -42,4 +42,9 @@ class House
     (@price.to_f / @area.to_f).round(2)
   end
 
+  # did not complete the below metho
+  # def rooms_sorted_by_area
+  #   @rooms.sort_by {|area|}
+  # end
+
 end
