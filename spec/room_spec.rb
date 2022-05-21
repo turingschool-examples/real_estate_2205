@@ -20,5 +20,22 @@ RSpec.describe Room do
       expect(room1.area).to eq(130)
       expect(room2.area).to eq(180)
     end
+
+    it "is the room painted? (should not)" do
+        room1 = Room.new(:bedroom, 10, '13')
+        room2 = Room.new(:living_room, 15, '12')
+        expect(room1.is_painted?).to eq(false)
+        expect(room2.is_painted?).to eq(false)
+      end
+
+      it "is room painted (yes)" do
+        room1 = Room.new(:bedroom, 10, '13')
+        room2 = Room.new(:living_room, 15, '12')
+        room1.paint
+        room2.paint
+        expect(room1.is_painted?).to eq(true)
+        expect(room2.is_painted?).to eq(true)
+
+      end
+    end
   end
-end
