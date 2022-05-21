@@ -48,4 +48,13 @@ class House
     detail_hash
   end
 
+  def price_per_square_foot
+    final = price.to_f / area.to_f
+    final.ceil(2)
+  end
+
+  def rooms_sorted_by_area
+
+  end
+
 end
