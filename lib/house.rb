@@ -53,4 +53,10 @@ class House
     (@price / self.area.to_f).round(2)
   end
 
+  def rooms_sorted_by_area
+    sorted_rooms = @rooms.sort_by {|room| room.area}
+    sorted_rooms.reverse!
+    sorted_rooms
+  end
+
 end
