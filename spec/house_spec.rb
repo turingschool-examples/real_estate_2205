@@ -11,6 +11,12 @@ RSpec.describe House do
       expect(house).to be_instance_of(House)
     end
 
+    it 'returns price' do
+      house = House.new("$400000", "123 sugar lane")
+
+      expect(house.price).to eq(400000)
+    end
+
   end
 
 end
