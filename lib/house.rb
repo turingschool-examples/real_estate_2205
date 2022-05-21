@@ -15,4 +15,11 @@ class House
   def above_market_average?
     @price[1 .. -1].to_i > 500000
   end
+
+  def rooms_from_category(category)
+    @rooms.find_all do |room|
+      room.category == category
+    end
+  end
+
 end
