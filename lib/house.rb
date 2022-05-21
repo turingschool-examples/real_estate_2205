@@ -44,4 +44,15 @@ class House
     end
     return sorted_rooms.reverse
   end
+
+  def rooms_by_category
+    rooms_in_categories = Hash.new
+    category_list = []
+    category_list = rooms.map {|room| room.category}.uniq
+
+    category_list.each do |category_from_list|
+      rooms_in_categories[category_from_list] = rooms_from_category(category_from_list)
+    end
+    return rooms_in_categories
+  end
 end
