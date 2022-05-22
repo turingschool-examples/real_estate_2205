@@ -1,6 +1,6 @@
 class House
 
-  attr_reader :price, :address, :rooms, :area
+  attr_reader :price, :address, :rooms, :area, :details
   def initialize(price, address)
     @price = price
     @address = address
@@ -23,4 +23,15 @@ class House
   def area
     rooms.map { |room| room.area }.reduce(:+)
   end
+
+  def details
+    detail = Hash.new(0)
+    {"price" => @price.sub("$", "").to_i, "address" => @address}
+  end
+
+  def price_per_square_foot
+    (@price.sub("$", "").to_f / area).round(2)
+
+  end
+
 end
