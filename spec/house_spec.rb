@@ -99,5 +99,33 @@ RSpec.describe House do
 
         expect(house.price_per_square_foot).to eq(210.53)
       end
+
+      it "sorts rooms by area" do
+        house = House.new("$400000", "123 sugar lane")
+        room_1 = Room.new(:bedroom, 10, '13')
+        room_2 = Room.new(:bedroom, 11, '15')
+        room_3 = Room.new(:living_room, 25, '15')
+        room_4 = Room.new(:basement, 30, '41')
+        house.add_room(room_1)
+        house.add_room(room_2)
+        house.add_room(room_3)
+        house.add_room(room_4)
+
+        expect(house.rooms_sorted_by_area).to eq([room_1, room_2, room_3, room_4])
+      end
+
+      it "can nest rooms by category" do
+        house = House.new("$400000", "123 sugar lane")
+        room_1 = Room.new(:bedroom, 10, '13')
+        room_2 = Room.new(:bedroom, 11, '15')
+        room_3 = Room.new(:living_room, 25, '15')
+        room_4 = Room.new(:basement, 30, '41')
+        house.add_room(room_1)
+        house.add_room(room_2)
+        house.add_room(room_3)
+        house.add_room(room_4)
+
+        expect(house.rooms_by_category).to eq({:bedroom=>[room_1, room_2], :living_room=> [room_3], :basement=> [room_4]})
+      end
   end
 end

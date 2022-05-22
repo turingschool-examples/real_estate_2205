@@ -23,13 +23,16 @@ class House
   end
 
   def rooms_from_category(category)
-    rooms_array = []
-      @rooms.each do |room|
-        if room.category == category
-          rooms_array << room
-        end
-      end
-      rooms_array
+    @rooms.find_all do |room|
+      room.category == category
+    end
+    # rooms_array = []
+    #   @rooms.each do |room|
+    #     if room.category == category
+    #       rooms_array << room
+    #     end
+    #   end
+    #   rooms_array
   end
 
   def area
@@ -52,5 +55,19 @@ class House
     ppsf = price.to_f / area.to_f
        ppsf.round(2)
  #Went 3 minutes over looking through my notes for .round(2) which I had compledted in ruby-exercises/ints_and_floats
+  end
+
+  def rooms_sorted_by_area
+    # require "pry"; binding.pry
+    @rooms
+  end
+
+  def rooms_by_category
+    rooms_by_category =
+    {
+      bedroom: rooms_from_category(:bedroom),
+      living_room: rooms_from_category(:living_room),
+      basement: rooms_from_category(:basement)
+    }
   end
 end
