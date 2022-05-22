@@ -56,9 +56,8 @@ class House
        ppsf.round(2)
  #Went 3 minutes over looking through my notes for .round(2) which I had compledted in ruby-exercises/ints_and_floats
   end
-
+#Below completed after time alotted
   def rooms_sorted_by_area
-    # require "pry"; binding.pry
     @rooms
   end
 
