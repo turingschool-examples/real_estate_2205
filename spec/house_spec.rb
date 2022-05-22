@@ -50,7 +50,7 @@ RSpec.describe House do
       expect(house.above_market_average?).to equal(false)
     end
 
-    xit "can list rooms from category" do
+    it "can list rooms from category" do
       house = House.new("$400000", "123 sugar lane")
       room_1 = Room.new(:bedroom, 10, '13')
       room_2 = Room.new(:bedroom, 11, '15')
@@ -63,13 +63,13 @@ RSpec.describe House do
       house.add_room(room_4)
 
       expect(house.rooms_from_category(:bedroom).count).to equal(2)
-      expect(house.rooms_from_category(:bedroom)[0].length).to eq(10)
-      expect(house.rooms_from_category(:bedroom)[1].width).to eq('15')
+      expect(house.rooms_from_category(:bedroom)[0].area).to eq(130)
+      expect(house.rooms_from_category(:bedroom)[1].area).to eq(165)
       expect(house.rooms_from_category(:basement).count).to equal(1)
-      expect(house.rooms_from_category(:basement)[0].length).to eq(30)
+      expect(house.rooms_from_category(:basement)[0].area).to eq(1230)
     end
 
-    xit "can calcuate its area" do
+    it "can calcuate its area" do
       house = House.new("$400000", "123 sugar lane")
       room_1 = Room.new(:bedroom, 10, '13')
       room_2 = Room.new(:bedroom, 11, '15')
@@ -84,7 +84,7 @@ RSpec.describe House do
       expect(house.area).to eq(1900)
     end
 
-    xit "can list its details" do
+    it "can list its details" do
       house = House.new("$400000", "123 sugar lane")
 
       expect(house.details["price"]).to eq(400000)
