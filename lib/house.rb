@@ -13,25 +13,12 @@ class House
     @rooms << room
   end
 
-  dev above_market_average?
-  if @price > 500000
+  def above_market_average?
+  if @price.delete("$").to_i > 500000
     true
-  else
+  end
     false
   end
-
-
-
-
-
-
-
-
-
-
-
-
-
 
 
 

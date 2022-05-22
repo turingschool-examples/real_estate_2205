@@ -58,13 +58,4 @@ RSpec.describe House do
 
 
 
-
-
-
-
-
-
-
-
-
 end
