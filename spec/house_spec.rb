@@ -2,13 +2,13 @@ require './lib/room'
 require './lib/house'
 
 RSpec.describe House do
-  describe 'iteration 2' do
-    xit "house is an instance of house" do
+  describe 'iteration 2 and 3' do
+    it "house is an instance of house" do
       house = House.new("$400000", "123 sugar lane")
       expect(house).to be_instance_of(House)
     end
 
-    xit "price of house" do
+    it "price of house" do
       house = House.new("$400000", "123 sugar lane")
       expect(house.price).to eq("$400000")
     end
@@ -18,26 +18,26 @@ RSpec.describe House do
       expect(house.address).to eq("123 sugar lane")
     end
 
-    xit "the house has no rooms" do
+    it "the house has no rooms" do
       house = House.new("$400000", "123 sugar lane")
       expect(house.rooms).to eq([])
     end
 
-    xit "has a new room" do
+    it "has a new room" do
       house = House.new("$400000", "123 sugar lane")
       room_1 = Room.new(:bedroom, 10, '13')
       room_2 = Room.new(:bedroom, 11, '15')
       expect(room_1).to be_instance_of(Room)
     end
 
-    xit "has another new room" do
+    it "has another new room" do
       house = House.new("$400000", "123 sugar lane")
       room_1 = Room.new(:bedroom, 10, '13')
       room_2 = Room.new(:bedroom, 11, '15')
       expect(room_2).to be_instance_of(Room)
     end
 
-    xit "add new rooms to the house" do
+    it "add new rooms to the house" do
       house = House.new("$400000", "123 sugar lane")
       room_1 = Room.new(:bedroom, 10, '13')
       room_2 = Room.new(:bedroom, 11, '15')
@@ -48,12 +48,12 @@ RSpec.describe House do
       expect(house.rooms).to eq([room_1, room_2])
     end
 
-    xit "is price above market average?" do
+    it "is price above market average?" do
       house = House.new("$400000", "123 sugar lane")
       expect(house.above_market_average?).to be false
     end
 
-    xit "can return rooms by category" do
+    it "can return rooms by category" do
       house = House.new("$400000", "123 sugar lane")
       room_1 = Room.new(:bedroom, 10, '13')
       room_2 = Room.new(:bedroom, 11, '15')
@@ -68,7 +68,7 @@ RSpec.describe House do
       expect(house.rooms_from_category(:bedroom)).to eq([room_1,  room_2])
     end
 
-    xit "has a basement" do
+    it "has a basement" do
       house = House.new("$400000", "123 sugar lane")
       room_1 = Room.new(:bedroom, 10, '13')
       room_2 = Room.new(:bedroom, 11, '15')

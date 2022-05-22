@@ -21,8 +21,6 @@ class House
   end
 
   def area
-    square_footage
-    rooms.each { |room| room.area }
-    return sum.reduce(:+)
+    rooms.map { |room| room.area }.reduce(:+)
   end
 end
