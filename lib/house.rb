@@ -1,6 +1,6 @@
 class House
 
-  attr_reader :price, :address, :rooms
+  attr_reader :price, :address, :rooms, :area
   def initialize(price, address)
     @price = price
     @address = address
@@ -20,4 +20,9 @@ class House
     rooms.select { |room| room.category == category }
   end
 
+  def area
+    square_footage
+    rooms.each { |room| room.area }
+    return sum.reduce(:+)
+  end
 end
