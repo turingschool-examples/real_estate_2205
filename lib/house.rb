@@ -52,11 +52,9 @@ class House
       categories << room.category
     end
     categories.uniq!
-
     categories.each do |category|
       rooms_hash[category] = rooms_from_category(category)
     end
-
     rooms_hash
   end
 end
