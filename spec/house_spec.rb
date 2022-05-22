@@ -3,7 +3,7 @@ require './lib/house'
 require 'pry'
 
 
-Rspec.describe House do
+RSpec.describe House do
   describe 'iteration 2' do
     it 'exists' do
       house = House.new("$400000", "123 sugar lane")
@@ -13,7 +13,7 @@ Rspec.describe House do
 
 
 
-    xit 'has a price' do
+    it 'has a price' do
       house = House.new("$400000", "123 sugar lane")
       expect(house.price).to eq("400000")
 
