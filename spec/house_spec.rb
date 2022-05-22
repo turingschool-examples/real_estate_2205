@@ -13,7 +13,7 @@ Rspec.describe House do
 
 
 
-    it 'has a price' do
+    xit 'has a price' do
       house = House.new("$400000", "123 sugar lane")
       expect(house.price).to eq("400000")
 
@@ -21,7 +21,7 @@ Rspec.describe House do
 
 
 
-    it 'has an address' do
+    xit 'has an address' do
       house = House.new("$400000", "123 sugar lane")
       expect(house.address).to eq("123 sugar lane")
 
@@ -29,7 +29,7 @@ Rspec.describe House do
 
 
 
-    it 'has no rooms' do
+    xit 'has no rooms' do
       house = House.new("$400000", "123 sugar lane")
       expect(house.rooms).to eq([])
 
@@ -37,7 +37,7 @@ Rspec.describe House do
 
 
 
-    it 'adds rooms' do
+    xit 'adds rooms' do
       house = House.new("$400000", "123 sugar lane")
       room_1 = Room.new(:bedroom, 10, '13')
       room_2 = Room.new(:bedroom, 11, '15')
@@ -66,7 +66,5 @@ Rspec.describe House do
 
 
 
-
-  end
 
 end

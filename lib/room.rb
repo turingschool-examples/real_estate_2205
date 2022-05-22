@@ -14,7 +14,7 @@ class Room
 
 
   def area
-    area = @length * @width
+    @length * @width
   end
 
 
