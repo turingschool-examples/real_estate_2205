@@ -33,4 +33,30 @@ class House
       "address" => @address
     }
   end
+
+  def price_per_sqare_foot
+    ppsq = sprintf "%.2f", @price/area.to_f
+    ppsq.to_f
+  end
+
+  def rooms_sorted_by_area
+    @rooms.sort_by do |room|
+      -room.area
+    end
+  end
+
+  def rooms_by_category
+    rooms_hash = {}
+    categories = []
+    @rooms.each do |room|
+      categories << room.category
+    end
+    categories.uniq!
+
+    categories.each do |category|
+      rooms_hash[category] = rooms_from_category(category)
+    end
+
+    rooms_hash
+  end
 end
