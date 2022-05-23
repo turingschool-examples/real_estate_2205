@@ -31,6 +31,15 @@ class House
     room_categories
   end
 
+  def area
+    area_of_house = 0
+    @rooms.each do |room|
+      area_of_house += room.area
+    end
+    area_of_house
+  end
+
+
 
 
 

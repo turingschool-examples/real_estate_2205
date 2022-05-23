@@ -70,7 +70,7 @@ RSpec.describe House do
       house.add_room(room_3)
       house.add_room(room_4)
 
-      expect(house.area).to be eq(1900)
+      expect(house.area).to eq(1900)
     end
   end
 end
