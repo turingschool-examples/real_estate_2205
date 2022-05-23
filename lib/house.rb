@@ -46,4 +46,9 @@ class House
 	 return details
 	end
 
+	def price_per_square_foot
+		price_per_square_foot = @price / area.to_f
+		return price_per_square_foot.to_f
+	end
+
 end
