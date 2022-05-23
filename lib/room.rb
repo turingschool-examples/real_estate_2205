@@ -4,7 +4,9 @@ attr_reader :category, :area, :length, :width
     @category = category
     @area = area
   end
-  def area(length, width)
-    
+  def multiply(length, width)
+    room_1.area
+    room_2.area
+
   end
 end
