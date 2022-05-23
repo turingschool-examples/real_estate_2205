@@ -41,6 +41,15 @@ class House
 
 
 
+  def details
+    {
+      "price" => @price.delete("$").to_i,
+      "address" => @address
+    }
+  end
+
+
+
 
 
 

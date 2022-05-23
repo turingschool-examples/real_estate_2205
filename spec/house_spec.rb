@@ -92,7 +92,7 @@ RSpec.describe House do
 
 
 
-    xit 'uses hash' do
+    it 'gives details using hash' do
       house = House.new("$400000", "123 sugar lane")
       expect(house.details).to eq({"price" => 400000, "address" => "123 sugar lane"})
 
