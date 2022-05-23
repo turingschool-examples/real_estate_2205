@@ -37,4 +37,9 @@ class House
       "address" => @address
     }
   end
+
+  def price_per_square_foot
+    square_foot_price_rounded = @price / area.to_f
+    square_foot_price_rounded.round(2)
+  end
 end
