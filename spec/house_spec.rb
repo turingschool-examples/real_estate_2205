@@ -8,6 +8,7 @@ RSpec.describe House do
       @house = House.new("$400000", "123 sugar lane")
       @room_1 = Room.new(:bedroom, 10, '13')
       @room_2 = Room.new(:bedroom, 11, '15')
+      @room_3 = Room.new(:basement, 20, '15')
     end
 
     it 'exists' do
@@ -25,6 +26,10 @@ RSpec.describe House do
       @house.add_room(@room_2)
 
       expect(@house.rooms).to eq([@room_1, @room_2])
+            #robust test
+      @house.add_room(@room_3)
+
+      expect(@house.rooms).to eq([@room_1, @room_2, @room_3])
     end
   end
 end
