@@ -83,7 +83,5 @@ RSpec.describe House do
       house.add_room(room_4)
       expect(house.details.price).to eq(40000)
     end
-
-    end
   end
 end
