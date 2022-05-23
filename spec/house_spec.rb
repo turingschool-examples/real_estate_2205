@@ -50,6 +50,14 @@ RSpec.describe House do
 
   it "can return a hash of a house's attributes" do
     expect(house.details).to eq({"price" => 400000, "address" => "123 sugar lane"})
+  end
 
+  it "can calculate the price per square foot of a home" do
+    house.add_room(room_4)
+    house.add_room(room_1)
+    house.add_room(room_3)
+    house.add_room(room_2)
+
+    expect(house.price_per_square_foot).to eq (210.53)
   end
 end
