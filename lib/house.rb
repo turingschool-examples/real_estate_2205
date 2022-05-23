@@ -30,4 +30,8 @@ class House
   def price_per_square_foot
     (@price.to_f / area).round(2)
   end
+
+  def rooms_sorted_by_area
+    @rooms.map.sort {|room| room.area}
+  end
 end
