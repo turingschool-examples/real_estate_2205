@@ -28,9 +28,17 @@ class House
           house_rooms << room
       end
     end
-    house_rooms 
+    house_rooms
+
   end
 
+  def area
+    house_area = []
+    @rooms.each do |room|
+      house_area << room.area
+    end
+    house_area.sum
 
+  end
 
 end
