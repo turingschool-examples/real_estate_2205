@@ -41,4 +41,9 @@ class House
   def details
     details = {"price" => @price, "address" => @address}
   end
+
+  def price_per_square_foot
+    squared = @price.to_f/area.to_f
+    squared.round(2)
+  end
 end
