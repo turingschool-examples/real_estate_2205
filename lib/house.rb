@@ -41,4 +41,13 @@ class House
 
   end
 
+  def details
+
+    spec = {"price" => 400000,
+
+      "address" => "123 sugar lane"
+    }
+
+  end
+
 end
