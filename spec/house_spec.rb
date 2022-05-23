@@ -58,7 +58,7 @@ RSpec.describe Room do
       house.add_room(room_4)
 
       expect(house.area).to eq(1900)
-      #expect(house.details).to eq({"price" => 400000, "address" => "123 sugar lane"})
+      expect(house.details).to eq({"price" => 400000, "address" => "123 sugar lane"})
     end
   end
 end

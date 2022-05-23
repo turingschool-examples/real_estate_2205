@@ -31,10 +31,14 @@ class House
   end
 
   def area
-    
+    rooms_sum = 0
+    rooms.each do |room|
+      rooms_sum += room.area
+    end
+    rooms_sum
   end
 
   def details
-    #creates hash that returns price and address
+    details = {"price" => @price, "address" => @address}
   end
 end
