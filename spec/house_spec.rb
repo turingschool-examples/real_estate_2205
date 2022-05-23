@@ -100,9 +100,9 @@ RSpec.describe House do
     room_3 = Room.new(:living_room, 25, '15')
     room_4 = Room.new(:basement, 30, '41')
     house.add_room(room_4)
+    house.add_room(room_1)
     house.add_room(room_3)
     house.add_room(room_2)
-    house.add_room(room_1)
     expected = {
       :bedroom => [room_1, room_2],
       :living_room => [room_3],
