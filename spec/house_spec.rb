@@ -32,7 +32,7 @@ RSpec.describe House do
       expect(house.above_market_average?).to be false
     end
 
-    xit "lists rooms from category" do
+    it "lists rooms from category" do
       house = House.new("$400000", "123 sugar lane")
       room_1 = Room.new(:bedroom, 10, '13')
       room_2 = Room.new(:bedroom, 11, '15')
@@ -42,11 +42,11 @@ RSpec.describe House do
       house.add_room(room_2)
       house.add_room(room_3)
       house.add_room(room_4)
-      expect(house.rooms_from_category(:bedroom)).to eq([room_1.room, room_2.room])
-      expect(house.rooms_from_category(:basement)).to eq([room_4.room])
+      expect(house.rooms_from_category(:bedroom)).to eq([room_1, room_2])
+      expect(house.rooms_from_category(:basement)).to eq([room_4])
     end
 
-    xit "calculates house area" do
+    it "calculates house area" do
       house = House.new("$400000", "123 sugar lane")
       room_1 = Room.new(:bedroom, 10, '13')
       room_2 = Room.new(:bedroom, 11, '15')
@@ -59,7 +59,7 @@ RSpec.describe House do
       expect(house.area).to eq(1900)
     end
 
-    xit "returns home details" do
+    it "returns home details" do
       house = House.new("$400000", "123 sugar lane")
       expect(house.details).to eq({"price" => 400000, "address" => "123 sugar lane"})
     end
