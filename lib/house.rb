@@ -24,4 +24,12 @@ class House
     end
     return list_of_rooms
   end
+
+  def area
+    t_area = 0
+    @rooms.each do |room|
+      t_area += room.area
+    end
+    return t_area
+  end
 end
