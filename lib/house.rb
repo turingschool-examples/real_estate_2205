@@ -1,7 +1,7 @@
 class House
-  attr_reader :price,
-              :address,
-              :rooms
+  attr_accessor :price,
+                :address,
+                :rooms
 
   def initialize(price_string, address)
     @price = price_string.gsub("$", "").to_i #this might be breaking law
@@ -11,5 +11,9 @@ class House
 
   def add_room(room)
     @rooms << room
+  end
+
+  def above_market_average?
+    @price > 500000
   end
 end
