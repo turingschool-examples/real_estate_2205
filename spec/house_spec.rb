@@ -56,6 +56,13 @@ RSpec.describe House do
       end
 
       it 'can tell the area of the house' do
+        expect(@house.area).to eq(0)
+
+        @house.add_room(@room_1)
+        @house.add_room(@room_2)
+        @house.add_room(@room_3)
+        @house.add_room(@room_4)
+
         expect(@house.area).to eq(1900)
       end
     end
