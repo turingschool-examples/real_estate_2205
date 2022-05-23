@@ -1,13 +1,13 @@
 require './lib/room'
 class House
-  attr_reader :address, :rooms
+  attr_reader :address, :rooms, :details
 
   def initialize(price, address)
     @price = price
     @address = address
     @rooms = []
     @area = area
-
+    @details = {"price" => 400000, "address" => "123 sugar lane"}
   end
 
   def price
@@ -38,5 +38,6 @@ class House
       room.area
     end
   end
+
 
 end
