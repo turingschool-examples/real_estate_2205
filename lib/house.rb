@@ -34,4 +34,8 @@ class House
   def rooms_sorted_by_area
     @rooms.map.sort {|room| room.area}
   end
+
+  def rooms_by_category
+    rooms_by_category = {:bedroom => rooms_from_category(:bedroom), :living_room => rooms_from_category(:living_room), :basement => rooms_from_category(:basement)}
+  end
 end
