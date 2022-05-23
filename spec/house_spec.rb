@@ -54,6 +54,10 @@ RSpec.describe House do
         expect(@house.rooms_from_category(:bedroom)).to eq([@room_1, @room_2])
         expect(@house.rooms_from_category(:basement)).to eq([@room_4])
       end
+
+      it 'can tell the area of the house' do
+        expect(@house.area).to eq(1900)
+      end
     end
   end
 end
