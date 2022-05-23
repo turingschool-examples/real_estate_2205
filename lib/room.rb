@@ -19,5 +19,4 @@ class Room
   def is_painted?
     @painted
   end
-
 end
