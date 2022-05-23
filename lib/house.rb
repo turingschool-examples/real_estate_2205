@@ -5,7 +5,6 @@ class House
     @price = price.delete("$").to_i
     @address = address
     @rooms = []
-    @details = {}
   end
 
   def add_room(room)
@@ -26,5 +25,9 @@ class House
 
   def details
     details = {"price" => @price, "address" => @address}
+  end
+
+  def price_per_square_foot
+    (@price.to_f / area).round(2)
   end
 end
