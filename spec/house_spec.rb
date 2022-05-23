@@ -38,4 +38,13 @@ RSpec.describe House do
     expect(house.rooms_from_category(:bedroom)).to eq([room_1, room_2])
     expect(house.rooms_from_category(:basement)).to eq([room_4])
   end
+
+  it "can calucluate the area of the home by adding the areas of all the rooms" do
+    house.add_room(room_1)
+    house.add_room(room_2)
+    house.add_room(room_3)
+    house.add_room(room_4)
+
+    expect(house.area).to eq(1900)
+  end
 end
