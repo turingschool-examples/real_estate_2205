@@ -30,4 +30,11 @@ class House
       room.area
     end
   end
+
+  def details
+    house_details = Hash.new
+    house_details["address"] = @address
+    house_details["price"] = @price
+    return house_details
+  end
 end
