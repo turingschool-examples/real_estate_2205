@@ -11,7 +11,7 @@ class House
   end
 
   def price
-    @price.slice!(0)
+    @price.slice!(0).to_i
     @price.to_i
   end
 
@@ -34,8 +34,8 @@ class House
   end
 
   def area
-    @rooms.each do |room|
-      room.area.sum
+    @rooms.sum do |room|
+      room.area
     end
   end
 
