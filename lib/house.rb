@@ -18,4 +18,10 @@ class House
       !@above_market_avg
     end
   end
+
+  def rooms_from_category(category)
+    @rooms.find_all do |room|
+      room.category == category
+    end
+  end
 end
