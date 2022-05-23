@@ -32,4 +32,11 @@ class House
     end
     return t_area
   end
+
+  def details
+    about_house = {}
+    about_house["price"] = @price
+    about_house["address"] = @address
+    return about_house
+  end
 end
