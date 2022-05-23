@@ -1,3 +1,4 @@
+require './lib/room'
 require './lib/house'
 
 RSpec.describe House do
@@ -20,5 +21,9 @@ RSpec.describe House do
     house.add_room(room_2)
 
     expect(house.rooms).to eq([room_1, room_2])
+  end
+
+  it "can tell if a house is above market average" do
+    expect(house.above_market_average?).to eq false
   end
 end
