@@ -22,12 +22,8 @@ class House
   end
 
   def rooms_from_category(category)
-  rooms_by_category = []
-  @rooms.each do |room|
-    if room.category == category
-      rooms_by_category << room
-      end
+    @rooms.find_all do |room|
+      room.category == category
     end
-    rooms_by_category
   end
 end
