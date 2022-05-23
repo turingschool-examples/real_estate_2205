@@ -3,6 +3,8 @@ require './lib/house'
 
 Rspec.describe Room do
   describe "Iteration 2" do
+    room_1 = Room.new(:bedroom, 10, '13')
+    room_2 = Room.new(:bedroom, 11, '15')
     it "exists" do
       house = House.new("$400000", "123 sugar lane")
       expect(house).to be_a House
@@ -19,11 +21,6 @@ Rspec.describe Room do
     it "has rooms" do
       house = House.new("$400000", "123 sugar lane")
       expect(house.rooms).to eq([])
-    end
-
-    end
-    end
-
     end
 
   end
