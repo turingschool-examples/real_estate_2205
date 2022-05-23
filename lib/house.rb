@@ -54,14 +54,11 @@ class House
       sorted_by_area << room
     end
     sorted_by_area.reverse
-
   end
 
+  def rooms_by_category
+    
 
-
-
-
-
-
+  end
 
 end
