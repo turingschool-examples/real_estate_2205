@@ -51,7 +51,7 @@ RSpec.describe House do
         @house.add_room(@room_3)
         @house.add_room(@room_4)
 
-        expect(@house.rooms_from_category(:bedroom)).to eq([@room_1, @room_2, @room_3, @room_4])
+        expect(@house.rooms_from_category(:bedroom)).to eq([@room_1, @room_2])
       end
     end
   end
