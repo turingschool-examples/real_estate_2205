@@ -50,4 +50,12 @@ class House
 
   end
 
+  def price_per_square_foot
+
+    price =  @house.price.slice!(0)
+      puts price
+
+     x = (price.to_i)/(@house.area)
+  end
+
 end
