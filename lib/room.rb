@@ -10,6 +10,5 @@ class Room
   def area
     (@width).to_i*@length
   end
-
-
+  
 end
