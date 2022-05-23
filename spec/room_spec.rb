@@ -4,16 +4,16 @@ RSpec.describe Room do
   describe "Iteration 1" do
     it "exists" do
       room = Room.new(:bedroom, 10, '13')
-      expect(room).to be_a Room
+      expect(room).to be_a(Room)
     end
 
-    xit "it has a category" do
+    it "it has a category" do
       room = Room.new(:bedroom, 10, '13')
 
       expect(room.category).to eq(:bedroom)
     end
 
-    xit "can get area" do
+    it "can get area" do
       room1 = Room.new(:bedroom, 10, '13')
       room2 = Room.new(:living_room, 15, '12')
 
