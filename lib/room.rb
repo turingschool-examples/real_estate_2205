@@ -4,12 +4,12 @@ class Room
   def initialize(category, length, width)
 		@category = category
 		@length = length
-		@width = width
+		@width = width.to_i
 		@room_painted = false
   end
 
 	def area
-		area = @length * @width.to_i
+		area = @length * @width
 	end
 
 	def is_painted?
