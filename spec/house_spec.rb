@@ -65,10 +65,11 @@ RSpec.describe House do
 
         expect(@house.area).to eq(1900)
       end
-      #35 minutes remaining. temptation to stop here...
 
-      it 'can tell house details, in an array' do
+      it 'can tell house details, in a hash' do
         expect(@house.details).to eq({"price" => 400000, "address" => "123 sugar lane"})
+          #robust test
+        expect(@house_x.details).to eq({"price" => 510000, "address" => "42 street 0"})
       end
     end
   end
