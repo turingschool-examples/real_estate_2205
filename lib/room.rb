@@ -7,7 +7,11 @@ class Room
   def initialize(category, length, width)
     @category = category
     @length = length
-    @width = width
+    @width = width.to_i
+  end
+
+  def area
+    @length * @width
   end
 
 
