@@ -3,7 +3,6 @@ class Room
               :length,
               :width
 
-
   def initialize(category, length, width)
     @category = category
     @length = length
