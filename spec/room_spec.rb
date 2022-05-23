@@ -22,14 +22,13 @@ RSpec.describe Room do
     end
 
     it 'can tell if room is painted, and can change status' do
-      expect(@room1.painted?).to be(false)
-      expect(@room2.painted?).to be(false)
+      expect(@room1.is_painted?).to be(false)
+      expect(@room2.is_painted?).to be(false)
 
       @room1.paint
 
-      expect(@room1.painted?).to be(true)
-      expect(@room2.painted?).to be(false)
+      expect(@room1.is_painted?).to be(true)
+      expect(@room2.is_painted?).to be(false)
     end
-
   end
 end
