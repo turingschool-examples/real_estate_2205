@@ -1,6 +1,6 @@
 class Room
 
-  def initialize
+  def initialize(category, length, width)
 
   end
 
