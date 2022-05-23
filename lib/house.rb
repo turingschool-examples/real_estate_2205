@@ -52,10 +52,12 @@ class House
 
   def price_per_square_foot
 
-    price =  @house.price.slice!(0)
-      puts price
+    x =  @house.price
+    price = x.reverse.chop.reverse
 
-     x = (price.to_i)/(@house.area)
+    price_int = price.to_i
+
+     x = ((price_int)/(@house.area).to_f)
   end
 
 end

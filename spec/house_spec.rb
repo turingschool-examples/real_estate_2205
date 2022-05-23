@@ -61,8 +61,8 @@ RSpec.describe House do
 
   end
 
-  it 'can calculate the price per sq. ft.' do
-    require "pry"; binding.pry
+  xit 'can calculate the price per sq. ft.' do
+
     expect(@house.price_per_square_foot).to eq(210.53)
 
   end
