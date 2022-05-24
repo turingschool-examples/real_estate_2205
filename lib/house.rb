@@ -19,14 +19,13 @@ class House
     end
   end
 
-  def rooms_from_category(search_category) ##method not fully working
+  def rooms_from_category(search_category)
     cat_search = []
     @rooms.each do |room|
-      if room.category == :search_category
+      if room.category == search_category
         cat_search << room
       end
     end
-    # require 'pry'; binding.pry
   end
 
   def area
